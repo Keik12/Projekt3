@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Projekt3</title>
+  </head>
+  <body>
+    <div id="logo" class="logo">Logo</div>
+    <div id="balance">Możesz jeszcze wydać</div>
+    <div class="container">
+      <div class="form">
+        <p>Przychody</p>
+        <form id="revenueForm">
+          <input
+            type="text"
+            placeholder="Nazwa przychodu"
+            name=""
+            id="revenueName"
+          />
+          <input type="number" placeholder="Kwota" name="" id="revenueAmount" />
+          <button type="submit" class="add">Dodaj</button>
+        </form>
+      </div>
+      <div class="form">
+        <p>Wydatki</p>
+        <form id="spendingForm">
+          <input
+            type="text"
+            placeholder="Nazwa wydatku"
+            name=""
+            id="spendingName"
+          />
+          <input
+            type="number"
+            placeholder="Kwota"
+            name=""
+            id="spendingAmount"
+          />
+          <button type="submit">Dodaj</button>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <div class="details" id="revenueDetails">
+        <ul id="revenueList"></ul>
+        <div class="summary">
+          <span>Suma przychodów:</span>
+          <span id="revenueSum">0</span>
+          <span>zł</span>
+        </div>
+      </div>
+      <div class="details" id="spendingDetails">
+        <ul id="spendingList"></ul>
+        <div class="summary">
+          <span>Suma wydatków:</span>
+          <span id="spendingSum">0</span>
+          <span>zł</span>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="
+    https://cdn.jsdelivr.net/npm/uuid@9.0.0/dist/index.min.js
+    "></script> -->
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

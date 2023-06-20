@@ -20,8 +20,17 @@
             placeholder="Nazwa przychodu"
             name=""
             id="revenueName"
+            required
           />
-          <input type="number" placeholder="Kwota" name="" id="revenueAmount" />
+          <input
+            type="number"
+            placeholder="Kwota"
+            name=""
+            id="revenueAmount"
+            required
+            min="0.01"
+            step="0.01"
+          />
           <button type="submit" class="add">Dodaj</button>
         </form>
       </div>
@@ -33,12 +42,16 @@
             placeholder="Nazwa wydatku"
             name=""
             id="spendingName"
+            required
           />
           <input
             type="number"
             placeholder="Kwota"
             name=""
             id="spendingAmount"
+            required
+            min="0.01"
+            step="0.01"
           />
           <button type="submit">Dodaj</button>
         </form>
@@ -62,9 +75,6 @@
         </div>
       </div>
     </div>
-    <!-- <script src="
-    https://cdn.jsdelivr.net/npm/uuid@9.0.0/dist/index.min.js
-    "></script> -->
     <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -66,7 +66,8 @@ function editElement(id, mode) {
   const name = window.prompt("Nowa nazwa", currentElement.name);
   const amount = window.prompt("Nowa wartosc", currentElement.amount);
 
-  if (!name || !amount) {
+  if (!name || Number(amount) <= 0) {
+    window.alert("Podaj poprawne dane");
     return;
   }
 
@@ -75,29 +76,13 @@ function editElement(id, mode) {
 
   if (mode === "SPENDING") {
     spendingArray = spendingArray.map((el) => {
-      if (el.id === id) {
-        return {
-          ...el,
-          name,
-          amount,
-        };
-      } else {
-        return el;
-      }
+      return el.id === id ? { ...el, name, amount } : el;
     });
 
     document.getElementById("spendingSum").innerText = calcSum(spendingArray);
   } else {
     revenueArray = revenueArray.map((el) => {
-      if (el.id === id) {
-        return {
-          ...el,
-          name,
-          amount,
-        };
-      } else {
-        return el;
-      }
+      return el.id === id ? { ...el, name, amount } : el;
     });
 
     document.getElementById("revenueSum").innerText = calcSum(revenueArray);

@@ -5,34 +5,39 @@
 }
 
 body {
+  --base-padding: 5px;
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
 }
 
-.logo {
-  border: 2px solid;
+.logo,
+.balance {
   margin: 20px auto;
-  height: 100px;
-  width: 100px;
   padding: 10px;
-  text-align: center;
-  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo,
+.balance,
+.spending-box,
+.revenue-box {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 4px;
 }
 
+.logo {
+  height: 100px;
+  width: 100px;
+  font-size: 24px;
+}
+
 .balance {
-  border: 2px solid;
-  margin: 20px auto;
   height: 80px;
   width: 1000px;
-  padding: 10px;
-  text-align: center;
-  font-size: 48px;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 4px;
+  font-size: 36px;
 }
 
 .container {
@@ -46,9 +51,6 @@ body {
 .spending-box,
 .revenue-box {
   width: 100%;
-  background-color: #fff;
-  border: 2px solid #ccc;
-  border-radius: 4px;
   padding: 20px;
 }
 
@@ -68,13 +70,30 @@ body {
 }
 
 .btn-add {
+  background-color: #2196f3;
+  font-size: 16px;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete {
   padding: 10px 20px;
-  background-color: #4caf50;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+}
+
+.btn-edit,
+.btn-delete {
+  font-size: 12px;
+}
+
+.btn-edit {
+  background-color: #4caf50;
+}
+.btn-delete {
+  background-color: #f44336;
 }
 
 .details {
@@ -82,7 +101,7 @@ body {
   background-color: #fff;
   border: 2px solid #ccc;
   border-radius: 4px;
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .details-output {
@@ -90,10 +109,28 @@ body {
   margin-bottom: 20px;
 }
 
-.details-output li {
+.details-list-element {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  align-items: center;
+  padding: var(--base-padding) 20px;
+}
+
+.details-list-element:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.details-line::after {
+  content: "-";
+  padding: 0 var(--base-padding);
+}
+
+.details-output button:last-child {
+  margin-left: var(--base-padding);
 }
 
 .details-output {
@@ -106,6 +143,12 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
+  align-self: last baseline;
+}
+
+.summary-title {
+  flex: 1;
 }
 
 .spending-result {
@@ -130,6 +173,6 @@ body {
   }
 
   .balance {
-    font-size: 20px;
+    font-size: 28px;
   }
 }

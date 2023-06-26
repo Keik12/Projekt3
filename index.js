@@ -94,23 +94,31 @@ function editElement(id, mode) {
 function appendList(name, amount, container, mode) {
   let li = document.createElement("li");
   li.id = uuidv4();
+  li.classList.add("details-list-element");
 
   const spanName = document.createElement("span");
   spanName.textContent = name;
   spanName.id = `${li.id}-name`;
+  spanName.classList.add("details-line");
 
   const spanAmount = document.createElement("span");
   spanAmount.textContent = amount;
   spanAmount.id = `${li.id}-amount`;
 
+  const spacer = document.createElement("div");
+  spacer.classList.add("spacer");
+
   const btnEdit = document.createElement("button");
   btnEdit.textContent = "edytuj";
+  btnEdit.classList.add("btn-edit");
 
   const btnDelete = document.createElement("button");
   btnDelete.textContent = "usuń";
+  btnDelete.classList.add("btn-delete");
 
   li.appendChild(spanName);
   li.appendChild(spanAmount);
+  li.appendChild(spacer);
   li.appendChild(btnEdit);
   li.appendChild(btnDelete);
 

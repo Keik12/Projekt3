@@ -112,11 +112,11 @@ body {
   justify-content: space-between;
 }
 
-.details .summary span:last-child {
+.spending-result {
   color: #f44336;
 }
 
-.details .summary span:nth-child(2) {
+.revenure-result {
   color: #4caf50;
 }
 

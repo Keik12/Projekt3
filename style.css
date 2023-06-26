@@ -1,42 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
 .logo {
   border: 2px solid;
   margin: 20px auto;
-  width: 50px;
-  height: 50px;
+  height: 100px;
+  width: 100px;
   padding: 10px;
   text-align: center;
   font-size: 24px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
 
 .balance {
   border: 2px solid;
   margin: 20px auto;
+  height: 80px;
   width: 1000px;
-  height: 50px;
   padding: 10px;
   text-align: center;
   font-size: 48px;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
 }
 
-.form {
-  height: 100px;
-  width: 400px;
-  border: 2px solid black;
+.spending-box,
+.revenue-box {
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
 }
+
+.spending-text,
+.revenue-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.fill-inputs {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.btn-add {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* .btn-add:nth-child(even) {
+  background-color: #2196f3;
+} */
+
 .details {
-  height: 400px;
-  width: 400px;
-  border: 2px solid black;
-  position: relative;
+  width: 100%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
 }
 
-.summary {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.details-output {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.details-output li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.details-output {
+  font-size: 16px;
+}
+
+.details .summary {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details .summary span:last-child {
+  color: #f44336;
+}
+
+.details .summary span:nth-child(2) {
+  color: #4caf50;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .balance,
+  .spending-box,
+  .revenue-box,
+  .details {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .balance {
+    font-size: 20px;
+  }
 }

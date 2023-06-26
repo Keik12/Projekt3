@@ -12,16 +12,18 @@
     <div id="logo" class="logo">Logo</div>
     <div id="balance" class="balance">Bilans wynosi zero.</div>
     <div class="container">
-      <div class="form">
-        <p>Przychody</p>
+      <div class="revenue-box">
+        <p class="revenue-text">Przychody</p>
         <form id="revenueForm">
           <input
+            class="fill-inputs"
             type="text"
             placeholder="Nazwa przychodu"
             id="revenueName"
             required
           />
           <input
+            class="fill-inputs"
             type="number"
             placeholder="Kwota"
             id="revenueAmount"
@@ -29,19 +31,21 @@
             min="0.01"
             step="0.01"
           />
-          <button type="submit" class="add">Dodaj</button>
+          <button type="submit" class="btn-add">Dodaj</button>
         </form>
       </div>
-      <div class="form">
-        <p>Wydatki</p>
+      <div class="spending-box">
+        <p class="spending-text">Wydatki</p>
         <form id="spendingForm">
           <input
+            class="fill-inputs"
             type="text"
             placeholder="Nazwa wydatku"
             id="spendingName"
             required
           />
           <input
+            class="fill-inputs"
             type="number"
             placeholder="Kwota"
             id="spendingAmount"
@@ -49,13 +53,13 @@
             min="0.01"
             step="0.01"
           />
-          <button type="submit">Dodaj</button>
+          <button type="submit" class="btn-add">Dodaj</button>
         </form>
       </div>
     </div>
     <div class="container">
       <div class="details" id="revenueDetails">
-        <ul id="revenueList"></ul>
+        <ul id="revenueList" class="details-output"></ul>
         <div class="summary">
           <span>Suma przychodów:</span>
           <span id="revenueSum">0</span>
@@ -63,7 +67,7 @@
         </div>
       </div>
       <div class="details" id="spendingDetails">
-        <ul id="spendingList"></ul>
+        <ul id="spendingList" class="details-output"></ul>
         <div class="summary">
           <span>Suma wydatków:</span>
           <span id="spendingSum">0</span>

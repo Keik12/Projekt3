@@ -66,7 +66,7 @@ function editElement(id, mode) {
   const name = window.prompt("Nowa nazwa", currentElement.name);
   const amount = window.prompt("Nowa wartosc", currentElement.amount);
 
-  if (!name || Number(amount) <= 0) {
+  if (!name || Number(amount) <= 0 || isNaN(Number(amount))) {
     window.alert("Podaj poprawne dane");
     return;
   }
